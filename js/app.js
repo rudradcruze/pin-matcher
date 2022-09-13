@@ -39,3 +39,22 @@ document.getElementById('calculator').addEventListener('click', function (event)
         typingPing.value = previousValue + buttonValue;
     }
 })
+
+document.getElementById('submit').addEventListener('click', function () {
+    const generatedPin = document.getElementById('display-pin').value;
+    const typingPin = document.getElementById('typing-pin').value;
+
+    const pinTrue = document.getElementById('pin-true');
+    const pinFalse = document.getElementById('pin-false');
+
+    if (generatedPin === typingPin)
+    {
+        pinFalse.style.display = 'none';
+        pinTrue.style.display = 'block';
+    }
+    else
+    {
+        pinTrue.style.display = 'none';
+        pinFalse.style.display = 'block';
+    }
+})
